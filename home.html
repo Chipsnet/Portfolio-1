@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I am 大野勇人</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
+
+        body,
+        h1 {
+            margin: 0;
+            font-family: 'Shippori Mincho', serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        a,
+        p {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        #head {
+            list-style: none;
+            background-color: black;
+            padding: 2% 0;
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+        }
+
+        #head a {
+            text-decoration: none;
+            font-size: 1.2em;
+            text-shadow: 0px 0px 0.5px rgb(0, 0, 0);
+            color: red;
+            font-weight: bold;
+        }
+
+        #head a:hover {
+            color: rgb(255, 255, 255);
+            font-size: 1.1em;
+            transition: 0.2s;
+        }
+
+        #dekai {
+            background: rgb(26, 10, 240);
+            background: radial-gradient(circle, rgba(26, 10, 240, 1) 0%, rgba(166, 240, 255, 1) 100%);
+            text-align: center;
+            padding: 20%;
+        }
+
+        #dekai h1 {
+            font-size: 3em;
+            color: white;
+            text-shadow: 0px 0px 5px rgb(0, 0, 0);
+        }
+
+        #dekai h1,
+        .name {
+            cursor: pointer;
+        }
+
+        #dekai p {
+            color: white;
+            text-shadow: 0px 0px 5px rgb(0, 0, 0);
+        }
+
+        #main {
+            text-shadow: 0px 0px 2px white;
+            padding: 20%;
+            background: rgb(236, 255, 0);
+            background: radial-gradient(circle, rgba(236, 255, 0, 1) 0%, rgba(239, 225, 0, 1) 40%, rgba(249, 109, 0, 1) 100%);
+        }
+
+        #main h1 {
+            text-align: center;
+            font-size: 3em;
+        }
+
+        #main h2 {
+            font-size: 1.5em;
+            text-align: center;
+            margin: 0;
+            margin-top: 5%;
+        }
+
+        #main p {
+            text-align: center;
+            margin: 0;
+            margin-top: 5%;
+            font-size: 1.5em;
+        }
+
+        #jiman {
+            background: rgb(255, 0, 0);
+            background: radial-gradient(circle, rgba(255, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+            padding: 20%;
+            color: white;
+            text-shadow: 0px 0px 5px gray;
+        }
+
+        #jiman h1 {
+            font-size: 3em;
+            text-align: center;
+        }
+
+        #jiman h2 {
+            font-size: 2em;
+            text-align: center;
+            margin: 0;
+
+        }
+
+        #jiman h3 {
+            font-size: 1.5em;
+            text-align: center;
+            margin: 0;
+        }
+
+        #jiman p {
+            text-align: center;
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .best {
+            font-weight: bold;
+        }
+
+        .fade {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .animation {
+            transition: 1s;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+
+<body>
+    <section id=head>
+        <div class="header-inline">
+            <ul>
+                <li><a href="#dekai">Home</a></li>
+                <li><a href="#main">Introduction</a></li>
+                <li><a href="#jiman">Achievement</a></li>
+            </ul>
+            <div>
+    </section>
+    <section id=dekai>
+        <h1>
+            大野　勇人
+        </h1>
+        <p class="name">Ono Hayato</p>
+        <hr width="400">
+        <p class="sita">Gamer Webcreater</p>
+    </section>
+    <section id=main>
+        <h1>Introduction</h1>
+        <hr width="400" color="black">
+        <h2>Name</h2>
+        <p>Ono　Hayato</p>
+        <h2>Birthday</h2>
+        <p>2002 6/19</p>
+        <h2>hobbies</h2>
+        <p>PC game(LoL/TFT/Valorant)</p>
+        <p>読書(ラブコメ/ミステリー/SF)</p>
+    </section>
+    <section id=jiman>
+        <h1>Achievement</h1>
+        <hr width="400" color="gray">
+        <h2>2018年</h2>
+        <h3>6月</h3>
+        <p>Team NextTime加入</p>
+        <h3>9月</h3>
+        <p>R6S JCGautumn出場 <span class="best">Best8</span></p>
+        <h3>12月</h3>
+        <p>R6S JCGwinter出場 <span class="best">Best4</span></p>
+        <h2>2019年</h2>
+        <h3>1月</h3>
+        <p>Team NextTime解散</p>
+        <p>Team Goat加入</p>
+        <h3>3月</h3>
+        <p>R6S JCGspring出場 <span class="best">Best4</span></p>
+        <h3>6月</h3>
+        <p>Team Goat脱退</p>
+    </section>
+
+    <script>
+        $(window).ready(function () {
+            $("h1, h2, h3, p, a").addClass("animation").addClass("fade")
+        })
+
+        $("#head a").on("click", function () {
+            $("h1, h2, h3, a, p").removeClass("animation").removeClass("fade")
+
+            $("h1, h2, h3, a, p").delay(100).queue(function () {
+                $("h1, h2, h3, p, a").addClass("animation").addClass("fade").dequeue()
+            })
+        })
+        $("#dekai h1").on("click", function () {
+            $(this).removeClass("animation").removeClass("fade")
+
+            if ($("#dekai h1").text() === "akumq1100") {
+                $(this).html("大野　勇人")
+            } else {
+                $(this).html("akumq1100")
+            }
+            $(this).delay(100).queue(function () {
+                $(this).addClass("animation").addClass("fade").dequeue()
+            })
+        })
+
+        $(".name").on("click", function () {
+            $(this).removeClass("animation").removeClass("fade")
+
+            if ($(".name").text() === "akumq1100") {
+                $(this).html("Ono Hayato")
+            } else {
+                $(this).html("akumq1100")
+            }
+            $(this).delay(100).queue(function () {
+                $(this).addClass("animation").addClass("fade").dequeue()
+            })
+        })
+    </script>
+</body>
+
+</html>
