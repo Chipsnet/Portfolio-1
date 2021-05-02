@@ -12,144 +12,310 @@
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://i.gyazo.com/b1a62c6c540f1e31182ef601d77805de.jpg">
 </head>
-    <title>I am 大野勇人</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
+<title>I am 大野勇人</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
 
-        body,
-        h1 {
-            margin: 0;
-            font-family: 'Shippori Mincho', serif;
+    body,
+    h1 {
+        margin: 0;
+        font-family: 'Shippori Mincho', serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    a,
+    p {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    #head {
+        font-size: 1.4em;
+        list-style: none;
+        background-color: black;
+        padding-bottom: 2%;
+        position: fixed;
+        width: 150%;
+        z-index: 999;
+        height: 5%;
+        overflow: hidden;
+    }
+    #head li{
+        float: left;
+        margin-right: 30px;
+    }
+
+    #head a {
+        text-decoration: none;
+        font-size: 1.2em;
+        text-shadow: 0px 0px 0.5px rgb(0, 0, 0);
+        color: red;
+        font-weight: bold;
+    }
+
+    #head a:hover {
+        color: rgb(255, 255, 255);
+        font-size: 1.3em;
+        transition: 0.5s;
+    }
+    @media all and (min-width: 768px) and (max-width: 1024px) {
+    }
+ 
+    @media all and (min-width: 480px) and (max-width: 768px) {
+        #head{
+            padding-bottom: 4%;
         }
-
-        h1,
-        h2,
-        h3,
-        a,
-        p {
-            opacity: 0;
-            transform: translateX(-50px);
+    }
+    
+    @media all and (max-width: 480px) {
+        #head{
+            padding-bottom: 10%;
         }
-
-        #head {
-            list-style: none;
-            background-color: black;
-            padding: 2% 0;
-            position: fixed;
-            width: 100%;
-            z-index: 999;
+        #head a{
+            font-size: 0.7em;
         }
-
-        #head a {
-            text-decoration: none;
-            font-size: 1.2em;
-            text-shadow: 0px 0px 0.5px rgb(0, 0, 0);
-            color: red;
-            font-weight: bold;
+        #head :hover{
+            font-size: 0.9em;
         }
+    }
 
-        #head a:hover {
-            color: rgb(255, 255, 255);
-            font-size: 1.1em;
-            transition: 0.2s;
+    #dekai {
+        background: rgb(26, 10, 240);
+        background: radial-gradient(circle, rgba(26, 10, 240, 1) 0%, rgba(166, 240, 255, 1) 100%);
+        padding: 20%;
+        text-align: center;
+    }
+
+
+    #dekai h1 {
+        font-size: 5em;
+        color: white;
+        text-shadow: 0px 0px 5px rgb(0, 0, 0);
+    }
+
+    #dekai h1,
+    .name {
+        cursor: pointer;
+    }
+
+    #dekai p {
+        color: white;
+        text-shadow: 0px 0px 5px rgb(0, 0, 0);
+        font-size: 1.5em;
+    }
+    @media all and (min-width: 768px) and (max-width: 1024px) {
+        #dekai{
+            padding-top: 50%;
+            padding-bottom: 60%;
         }
-
-        #dekai {
-            background: rgb(26, 10, 240);
-            background: radial-gradient(circle, rgba(26, 10, 240, 1) 0%, rgba(166, 240, 255, 1) 100%);
-            text-align: center;
-            padding: 20%;
-        }
-
         #dekai h1 {
             font-size: 3em;
-            color: white;
-            text-shadow: 0px 0px 5px rgb(0, 0, 0);
-        }
+    }
 
-        #dekai h1,
-        .name {
-            cursor: pointer;
+        #dekai p {
+            font-size: 2em;
+    }
+}
+ 
+    @media all and (min-width: 480px) and (max-width: 768px) {
+        #dekai{
+            padding-bottom: 70%;
+        }
+        #dekai h1 {
+            font-size: 3em;
+            padding-top: 40%;
+        }
+        #dekai p {
+            font-size: 2em;
+        }
+    }
+    
+    @media all and (max-width: 480px) {
+        #dekai {
+            padding: 20%;
+            white-space: nowrap;
+            padding-top: 50%;
+            padding-bottom: 80%;           }
+        #dekai h1 {
+            font-size: 3em;
         }
 
         #dekai p {
-            color: white;
-            text-shadow: 0px 0px 5px rgb(0, 0, 0);
+            font-size: 1.3em;
         }
+        .display-none{
+            display: none;
+        }           
+        
+    }
+    #main {
+        text-shadow: 0px 0px 2px white;
+        padding: 10%;
+        background: rgb(236, 255, 0);
+        background: radial-gradient(circle, rgba(236, 255, 0, 1) 0%, rgba(239, 225, 0, 1) 40%, rgba(249, 109, 0, 1) 100%);
+    }
 
-        #main {
-            text-shadow: 0px 0px 2px white;
-            padding: 20%;
-            background: rgb(236, 255, 0);
-            background: radial-gradient(circle, rgba(236, 255, 0, 1) 0%, rgba(239, 225, 0, 1) 40%, rgba(249, 109, 0, 1) 100%);
+    #main h1 {
+        text-align: center;
+        font-size: 3em;
+    }
+
+    #main h2 {
+        font-size: 2em;
+        text-align: center;
+        margin: 0;
+        padding-top: 5%;
+    }
+
+    #main p {
+        text-align: center;
+        margin: 0;
+        font-size: 2em;
+    }
+    @media all and (min-width: 768px) and (max-width: 1024px) {
+        #main{
+            padding-top: 40%;
+            padding-bottom: 40%;
         }
-
-        #main h1 {
-            text-align: center;
-            font-size: 3em;
+        #main h1{
+            font-size: 3em; 
         }
-
-        #main h2 {
-            font-size: 1.5em;
-            text-align: center;
-            margin: 0;
-            margin-top: 5%;
-        }
-
-        #main p {
-            text-align: center;
-            margin: 0;
-            margin-top: 5%;
-            font-size: 1.5em;
-        }
-
-        #jiman {
-            background: rgb(255, 0, 0);
-            background: radial-gradient(circle, rgba(255, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
-            padding: 20%;
-            color: white;
-            text-shadow: 0px 0px 5px gray;
-        }
-
-        #jiman h1 {
-            font-size: 3em;
-            text-align: center;
-        }
-
-        #jiman h2 {
+        #main h2{
             font-size: 2em;
-            text-align: center;
-            margin: 0;
-
+        }
+        #main p{
+            font-size: 2em;
         }
 
-        #jiman h3 {
-            font-size: 1.5em;
-            text-align: center;
-            margin: 0;
+    }
+ 
+    @media all and (min-width: 480px) and (max-width: 768px) {
+        #main{
+            padding-top: 30%;
+            padding-bottom: 40%;
         }
-
-        #jiman p {
-            text-align: center;
-            font-size: 1.5em;
-            margin: 0;
+        #main h1{
+            font-size: 3em;
         }
-
-        .best {
-            font-weight: bold;
+        #main h2{
+            font-size: 2em;
         }
-
-        .fade {
-            transform: translateX(0);
-            opacity: 1;
+        #main p{
+            font-size: 2em;
         }
-
-        .animation {
-            transition: 1s;
+        
+    }
+    
+    @media all and (max-width: 480px) {
+        #main{
+            white-space: nowrap;
+            padding-top: 40%;
+            padding-bottom: 50%;
         }
-    </style>
+        #main h1{
+            font-size: 2.5em;
+        }
+        #main p{
+            font-size: 1.1em
+            
+        }
+    }
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    #jiman {
+        background: rgb(255, 0, 0);
+        background: radial-gradient(circle, rgba(255, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+        padding: 10%;
+        color: white;
+        text-shadow: 0px 0px 5px gray;
+    }
+
+    #jiman h1 {
+        font-size: 3em;
+        text-align: center;
+    }
+
+    #jiman h2 {
+        font-size: 2em;
+        text-align: center;
+        margin: 0;
+
+    }
+
+    #jiman h3 {
+        font-size: 1.5em;
+        text-align: center;
+        margin: 0;
+    }
+
+    #jiman p {
+        text-align: center;
+        font-size: 1.5em;
+        margin: 0;
+    }
+    @media all and (min-width: 768px) and (max-width: 1024px) {
+        #jiman{
+            padding-top: 20%;
+            padding-bottom: 30%;
+        }
+        #jiman h2{
+            font-size: 2em;
+            padding-top: 5%;
+        }
+        #jiman h3{
+            font-size: 2em;
+            padding-top: 5px;
+        }
+        #jiman p{
+            font-size: 2em;
+        }
+    }
+ 
+    @media all and (min-width: 480px) and (max-width: 768px) {
+        #jiman h1{
+            font-size: 3em;
+        }
+        #jiman h2{
+            font-size: 2em;
+        }
+        #jiman h3{
+            font-size: 2em;
+        }
+        #jiman p{
+            font-size: 2em;
+        }
+    }
+    
+    @media all and (max-width: 480px) {
+        #jiman{
+            white-space: nowrap;
+            padding-top: 25%;
+        }
+        #jiman h1{
+            font-size: 2.3em;
+        }
+        #jiman p{
+            font-size: 1.1em;
+        }
+    }
+
+    .best {
+        font-weight: bold;
+    }
+
+    .fade {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .animation {
+        transition: 1s;
+    }
+    
+</style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 </head>
@@ -169,12 +335,12 @@
             大野　勇人
         </h1>
         <p class="name">Ono Hayato</p>
-        <hr width="400">
+        <hr width="400" class="display-none">
         <p class="sita">Gamer Webcreater</p>
     </section>
     <section id=main>
         <h1>Introduction</h1>
-        <hr width="400" color="black">
+        <hr width="400" color="black" class="display-none">
         <h2>Name</h2>
         <p>Ono　Hayato</p>
         <h2>Birthday</h2>
@@ -185,7 +351,7 @@
     </section>
     <section id=jiman>
         <h1>Achievement</h1>
-        <hr width="400" color="gray">
+        <hr width="400" color="gray" class="display-none">
         <h2>2019年</h2>
         <h3>6月</h3>
         <p>Team NextTime加入</p>
